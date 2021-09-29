@@ -1,0 +1,43 @@
+<idea-plugin>
+  <!--插件Id-->
+  <id>com.strongmore.dujitangideaplugin.id</id>
+  <!--插件名称-->
+  <name>SecondPlugin</name>
+  <!--插件版本号-->
+  <version>1.0</version>
+  <!--开发者信息-->
+  <vendor email="test@163.com" url="http://www.github.com">strongmore168</vendor>
+  <!--插件描述信息-->
+  <description><![CDATA[
+      this is my dujitang plugin that to show in blog
+    ]]></description>
+  <!--插件版本更新信息-->
+  <change-notes><![CDATA[
+      this is my dujitang plugin that to show in blog
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+   <!--uncomment to enable plugin in all products-->
+  <!--项目插件之后这个标签是注释的，需要打开，不然不能部署到IDEA的插件库-->
+  <depends>com.intellij.modules.lang</depends>
+
+  <!--配置一些扩展功能，如工具窗-->
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <!--配置我们定义的动作命令，如右键点击-->
+  <actions>
+    <!-- Add your actions here -->
+    <action id="EditorPopupTauntId" class="com.strongmore.dujitangplugin.action.EditorPopupTaunt"
+      text="毒鸡汤" description="毒鸡汤">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>
